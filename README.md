@@ -1,25 +1,38 @@
-# Mandacaru Crossfit 🌵
+# Mandacaru Crossfit - Backend Management
 
-Sistema de gestão de cobrança para atletas de crossfit desenvolvido para praticar conceitos avançados de **Programação Orientada a Objetos** em Java.
+Sistema de gestão de faturamento e membros desenvolvido em Java 21. O projeto simula o fluxo de cobrança de uma box de Crossfit, aplicando regras de negócio através de Programação Orientada a Objetos (POO) e Programação Funcional.
 
-## 🚀 O que este projeto demonstra?
-Este repositório foi criado para consolidar o entendimento sobre o desacoplamento de código. Os principais conceitos aplicados foram:
+## Objetivo do Projeto
+Este sistema consolidou o entendimento sobre acoplamento fraco (loose coupling) e o uso de interfaces funcionais para resolver desafios de cálculo de taxas dinâmicas e processamento de pagamentos.
 
-*   **Interfaces**: Uso do contrato `ServicoTaxa` para definir o comportamento de cobrança sem amarrar a uma implementação fixa.
-*   **Polimorfismo & Injeção de Dependência**: O sistema escolhe dinamicamente entre `TaxaFixa` (20%) ou `TaxaVip` (15%) com base no perfil do atleta.
-*   **Composição de Objetos**: Associação entre as entidades `Atleta`, `CheckIn` e `Recibo`.
+## Stack Técnica
+* Linguagem: Java 21 (LTS)
+* Paradigma: Orientação a Objetos e Funcional (Lambdas e Collections)
+* Ambiente de Desenvolvimento: Ubuntu Linux via IntelliJ IDEA
+* Versionamento: Git (Workflow de Rebase e Resolução de Conflitos)
 
-## 🛠️ Tecnologias e Ferramentas
-*   **Linguagem**: Java
-*   **Ambiente**: Linux (Ubuntu)
-*   **Versionamento**: Git & GitHub
+## Conceitos de Engenharia de Software Aplicados
+* Interfaces e Contratos: Uso de Pagavel e Ordenacao para definir regras de negócio estritas.
+* Lambdas & Collections: Implementação de ordenação personalizada para organizar o ranking de atletas.
+* Polimorfismo: Utilização de herança com MembroElite para sobrescrever comportamentos de cálculo de taxa.
 
-## 📋 Como funciona a lógica?
-1.  O sistema recebe os dados do atleta e o período de treino.
-2.  A duração é calculada e as horas são arredondadas para cima utilizando `Math.ceil`.
-3.  Dependendo da escolha do usuário (S/N para VIP), o `ServicoCobranca` recebe a implementação correta da taxa via construtor.
-4.  O recibo é gerado com o pagamento básico, o valor da taxa e o total.
+## Estrutura de Pacotes
+A organização segue os padrões de mercado para aplicações Java:
 
----
-**Autor:** Matheus Rian
-*Estudante de Ciência da Computação - IFBA Campus Paulo Afonso.*
+br.com.mandacaru
+├── interfaces   # Contratos de serviço (Pagavel, Ordenacao)
+├── model        # Entidades de negócio (Membro, MembroElite)
+└── main         # Entry point e orquestração do sistema
+
+## Como Executar
+1. Certifique-se de ter o JDK 21 instalado no seu ambiente Linux.
+2. Clone o repositório:
+   git clone https://github.com/Rian144hz/mandacaru-crossfit.git
+3. Compile e execute a classe principal:
+   javac br/com/mandacaru/main/MandacaruCross.java
+   java br.com.mandacaru.main.MandacaruCross
+
+## Autor
+Matheus Rian
+Estudante de Ciência da Computação - IFBA Campus Paulo Afonso.
+Foco em Backend (Spring Boot), Docker e Cloud (AWS).
