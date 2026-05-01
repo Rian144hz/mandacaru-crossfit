@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/mandacaru-crossfit.iml" filepath="$PROJECT_DIR$/mandacaru-crossfit.iml" />
+=======
+      <module fileurl="file://$PROJECT_DIR$/Sistema_mandacaru.iml" filepath="$PROJECT_DIR$/Sistema_mandacaru.iml" />
+>>>>>>> 6303595 (feat: implementa interface Ordenacao, lógica de desconto e lambdas)
     </modules>
   </component>
 </project>
